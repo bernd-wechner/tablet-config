@@ -3,7 +3,7 @@ A shell script to configure a graphics tablet attached to a Linux machine.
 
 It should be internally self documenting.
 
-In summary though it addresses the following problem under Xwindows currently when a graphics table is attached.
+In summary though it addresses the following problem under X windows currently when a graphics tablet is attached.
 
 1. The tablet is attached with a USB line and a display line (VGA or DVI or HDMI or whatever).
 1. The USB delivers the pen position (and related pen data)
