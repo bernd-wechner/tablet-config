@@ -93,7 +93,7 @@ fi
 
 #### Calculate Transform Matrix
 ScreenSize=$(xrandr | sed -n -e "/$Screen/ s/^.*current \(.*\),.*$/\1/p" | sed -r 's/\s*//g')
-TabletSizeAndPos=$(xrandr | awk /$TabletOutput/'{print $3}' | sed -r 's/\s*//g')
+TabletSizeAndPos=$(xrandr | awk /$TabletOutput/ |  grep -oP '\d+x\d+\+\d+\+\d+')
 
 # $ScreenSize $TabletSizeAndPos presents six numbers in order Xout, Yout, Xin, Yin, dXin, dYin
 # The next contains the magic of calulcating a transform matrix from these six numbers that captures
